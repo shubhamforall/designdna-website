@@ -1,0 +1,9 @@
+
+
+#Ignore cursor AI rules
+.cursor\rules\codacy.mdc
+
+# Temp/generated folders
+.logo-build/
+node_modules/
+.DS_Store
