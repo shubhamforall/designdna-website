@@ -8,11 +8,15 @@ window.addEventListener('scroll', updateHeader, { passive: true });
 
 menuToggle?.addEventListener('click', () => {
   const open = navLinks.classList.toggle('is-open');
+  menuToggle.classList.toggle('is-open', open);
+  header?.classList.toggle('menu-open', open);
   menuToggle.setAttribute('aria-expanded', String(open));
 });
 
 document.querySelectorAll('.nav-links a').forEach((link) => link.addEventListener('click', () => {
   navLinks?.classList.remove('is-open');
+  menuToggle?.classList.remove('is-open');
+  header?.classList.remove('menu-open');
   menuToggle?.setAttribute('aria-expanded', 'false');
 }));
 
