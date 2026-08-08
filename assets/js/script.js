@@ -34,4 +34,38 @@ document.querySelectorAll('[data-filter]').forEach((filter) => filter.addEventLi
   });
 }));
 
+const contactForm = document.querySelector('[data-contact-form]');
+const formStatus = document.querySelector('[data-form-status]');
+
+contactForm?.addEventListener('submit', async (event) => {
+  event.preventDefault();
+
+  const submitButton = contactForm.querySelector('button[type="submit"]');
+  submitButton.disabled = true;
+  submitButton.textContent = 'Sending Enquiry';
+  formStatus.hidden = true;
+  formStatus.classList.remove('is-error');
+
+  try {
+    const response = await fetch(contactForm.action, {
+      method: 'POST',
+      body: new FormData(contactForm),
+      headers: { Accept: 'application/json' }
+    });
+
+    if (!response.ok) throw new Error('Unable to send enquiry');
+
+    contactForm.reset();
+    formStatus.textContent = 'Thank you. Your enquiry has been sent successfully.';
+    formStatus.hidden = false;
+  } catch {
+    formStatus.textContent = 'We could not send your enquiry. Please try again or email us directly.';
+    formStatus.classList.add('is-error');
+    formStatus.hidden = false;
+  } finally {
+    submitButton.disabled = false;
+    submitButton.textContent = 'Send Enquiry';
+  }
+});
+
 document.querySelectorAll('[data-year]').forEach((year) => { year.textContent = new Date().getFullYear(); });

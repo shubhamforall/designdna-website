@@ -140,6 +140,8 @@ button, input, select, textarea { font: inherit; }
 .form-field label { color: var(--green); font-size: 11px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; }
 .form-field input, .form-field select, .form-field textarea { width: 100%; padding: 13px 0; border: 0; border-bottom: 1px solid rgba(11,46,38,.32); outline: none; background: transparent; color: var(--charcoal); }
 .form-field textarea { min-height: 110px; resize: vertical; }
+.form-status { margin: 18px 0 0; color: var(--green); font-size: 14px; font-weight: 500; }
+.form-status.is-error { color: #8A2E21; }
 .contact-card { padding: 42px; background: var(--green); color: var(--cream); }
 .contact-card h2 { margin: 0 0 25px; color: var(--gold); font-size: 42px; }
 .contact-card dl { margin: 0; }
