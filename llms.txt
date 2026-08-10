@@ -1,0 +1,18 @@
+# Design DNA Studio
+
+> Design DNA is a Pune-based interior design and civil engineering studio led by Divya Asabe. The studio provides interior design and execution, architectural planning, turnkey projects, construction and civil work, 3D views and walkthroughs, consultation, renovation, and interior styling.
+
+## Primary Pages
+
+- [Home](https://designdnastudio.in/): Luxury interiors and engineering-led execution in Pune.
+- [About](https://designdnastudio.in/about.html): Studio background and founder information.
+- [Services](https://designdnastudio.in/services.html): Interior design, planning, turnkey, construction, 3D, consultation, renovation, and styling services.
+- [Portfolio](https://designdnastudio.in/portfolio.html): Residential, kitchen, living room, bedroom, office, guest room, and 3D visualisation work.
+- [Contact](https://designdnastudio.in/contact.html): Enquiries for new interior design and civil engineering projects.
+
+## Contact
+
+- Email: designdna.in@gmail.com
+- Phone: +91 93560 11473
+- Instagram: https://www.instagram.com/designdna.in/
+- Location: Pune, Maharashtra, India
