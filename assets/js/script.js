@@ -58,6 +58,7 @@ contactForm?.addEventListener('submit', async (event) => {
     contactForm.reset();
     formStatus.textContent = 'Thank you. Your enquiry has been sent successfully.';
     formStatus.hidden = false;
+    window.fbq?.('track', 'Lead');
   } catch {
     formStatus.textContent = 'We could not send your enquiry. Please try again or email us directly.';
     formStatus.classList.add('is-error');
@@ -69,3 +70,7 @@ contactForm?.addEventListener('submit', async (event) => {
 });
 
 document.querySelectorAll('[data-year]').forEach((year) => { year.textContent = new Date().getFullYear(); });
+
+document.querySelectorAll('a[href^="tel:"], a[href^="mailto:"], a[href*="wa.me"]').forEach((link) => {
+  link.addEventListener('click', () => window.fbq?.('track', 'Contact'));
+});
